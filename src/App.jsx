@@ -1,75 +1,81 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import './App.css'
+import './locations.css'
+import Home from './pages/Home.jsx'
+import Stores from './pages/Stores.jsx'
+import About from './pages/About.jsx'
+import Contact from './pages/Contact.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [drawerOpen, setDrawerOpen] = useState(false)
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+    <BrowserRouter>
+      <header className="appbar">
+        <div className="appbar-inner">
+          <button
+            type="button"
+            className="menu-toggle"
+            style={{ padding: '20px 10px' }}
+            aria-expanded={drawerOpen}
+            aria-controls="appbar-drawer"
+            onClick={() => setDrawerOpen((open) => !open)}
+          >
+            <span className="menu-icon" aria-hidden="true" />
+          </button>
+
+          <Link to="/" className="brand-plate" aria-label="Retour à l'accueil">
+            EUROBAZAR
+          </Link>
+
+          <div className="desktop-links">
+            <Link to="/stores">Nos magasins</Link>
+            <Link to="/about">À propos de nous</Link>
+            <Link to="/contact">Nous contacter</Link>
+          </div>
         </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-          <h1>EUROBAZAR</h1>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
+
+        <div
+          className={`drawer ${drawerOpen ? 'open' : ''}`}
+          id="appbar-drawer"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Menu de navigation"
         >
-          Count is {count}
-        </button>
-        <div>
-          <p>omfg fuccjs</p>
+          <button
+            type="button"
+            className="drawer-close"
+            onClick={() => setDrawerOpen(false)}
+            aria-label="Fermer le menu"
+          >
+            ×
+          </button>
+          <nav className="drawer-nav">
+            <Link to="/stores" onClick={() => setDrawerOpen(false)}>
+              Nos magasins
+            </Link>
+            <Link to="/about" onClick={() => setDrawerOpen(false)}>
+              À propos de nous
+            </Link>
+            <Link to="/contact" onClick={() => setDrawerOpen(false)}>
+              Nous contacter
+            </Link>
+          </nav>
         </div>
-      </section>
 
-      <div className="ticks"></div>
+        <div className={`drawer-backdrop ${drawerOpen ? 'visible' : ''}`} onClick={() => setDrawerOpen(false)} />
+      </header>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>somethinggggg ?????</p>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+      <main className="main-title">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/stores" element={<Stores />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
+    </BrowserRouter>
   )
 }
 
