@@ -2,11 +2,12 @@
   --text: #636475;
   --text-h: #06080d;
   --bg: #fff;
+  --title-bg: #0000ff;
   --border: #e5e4e7;
   --code-bg: #f4f3ec;
   --accent: #3b48ff;
   --appbar-btn-bg: #9dacff;
-  --accent-bg: rgba(59, 82, 255, 0.1);
+  --accent-bg: rgba(59, 82, 255, 0.475);
   --accent-border: rgba(59, 85, 255, 0.5);
   --social-bg: rgba(244, 243, 236, 0.5);
   --location-bg: rgba(255, 255, 255, 0.88);
@@ -38,6 +39,7 @@
     --text: #9ca3af;
     --text-h: #f3f4f6;
     --bg: #16171d;
+    --title-bg: #16171d;
     --border: #2e303a;
     --code-bg: #1f2028;
     --accent: #84a8fc;

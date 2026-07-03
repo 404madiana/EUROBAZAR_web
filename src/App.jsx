@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import './App.css'
+import './index.css'
 import './locations.css'
 import Home from './pages/Home.jsx'
 import Stores from './pages/Stores.jsx'
@@ -25,7 +26,7 @@ function App() {
             <span className="menu-icon" aria-hidden="true" />
           </button>
 
-          <Link to="/" className="brand-plate" aria-label="Retour à l'accueil">
+          <Link to="/" className="brand-plate" aria-label="Retour à l'accueil" style={{backgroundColor: '#0000ff'}}>
             <img src='src/assets/img/title.svg' style={{width:'120px'}}/>
           </Link>
 
