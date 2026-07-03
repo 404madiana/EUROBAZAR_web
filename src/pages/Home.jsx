@@ -40,9 +40,9 @@ export default function Home() {
   return (
     <>
       <section id="center">
-        <div>
+        <div style={{textAlign: 'center'}}>
           <p>Bienvenue chez</p>
-          <h1>EUROBAZAR</h1>
+          <img src='src/assets/img/title.svg' style={{width:'800px'}}/>
         </div>
       </section>
 

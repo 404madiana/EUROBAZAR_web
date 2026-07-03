@@ -38,6 +38,10 @@
   align-items: center;
 }
 
+.drawer-title {
+  display: flex;
+}
+
 .desktop-links a,
 .drawer-nav a {
   color: var(--text-h, #111827);
