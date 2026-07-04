@@ -45,7 +45,7 @@ function App() {
           aria-label="Menu de navigation"
         >
           <div className="drawer-title">
-            <Link to="/" className="brand-plate" aria-label="Retour à l'accueil">
+            <Link to="/" className="brand-plate" aria-label="Retour à l'accueil" style={{backgroundColor: '#0000ff88'}}>
               <img href="/" src='src/assets/img/title.svg' style={{width:'250px'}}/>
             </Link>
             <button

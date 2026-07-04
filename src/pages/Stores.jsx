@@ -9,9 +9,10 @@ export default function Stores() {
   return (
     <section className="page-content">
       <header className="page-header">
-        <p className="eyebrow">Nos magasins</p>
-        <h1>Retrouvez nos boutiques</h1>
-        <p>Découvrez nos emplacements et horaires. Chaque boutique propose une sélection unique de produits EuroBazar.</p>
+        <p className="eyebrow">Nos</p>
+        <h1>magasins</h1>
+        <p>Nos magasins se situent principalement dans le département du Val-de-Marne.<br/>
+Retrouvez-les ci-dessous.</p>
       </header>
 
       <div className="stores-grid">

@@ -2,8 +2,8 @@ export default function About() {
   return (
     <section className="page-content">
       <header className="page-header">
-        <p className="eyebrow">À propos</p>
-        <h1>À propos de nous</h1>
+        <p className="eyebrow">L'équipe</p>
+        <h1>EuroBazar</h1>
         <p>EuroBazar réunit des produits choisis avec soin, des boutiques locales et une équipe engagée pour votre confort.</p>
       </header>
 

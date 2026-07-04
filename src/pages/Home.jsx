@@ -143,6 +143,8 @@ export default function Home() {
         </div>
         <div id="discover">
           <h2>Tous nos produits disponibles !</h2>
+          <p>De quoi à ajouter ici peut-être...<br/>
+          Un footer juste en-dessous.</p>
         </div>
       </section>
 

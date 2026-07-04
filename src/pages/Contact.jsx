@@ -2,8 +2,8 @@ export default function Contact() {
   return (
     <section className="page-content">
       <header className="page-header">
-        <p className="eyebrow">Contact</p>
-        <h1>Nous contacter</h1>
+        <p className="eyebrow">Nous</p>
+        <h1>contacter</h1>
         <p>Une question, une demande ou besoin d'un renseignement ? Écrivez-nous ou passez en boutique.</p>
       </header>
 
