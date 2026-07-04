@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { HashRouter, Routes, Route, Link } from 'react-router-dom'
 import './App.css'
 import './index.css'
 import './locations.css'
@@ -12,7 +12,7 @@ function App() {
   const [drawerOpen, setDrawerOpen] = useState(false)
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <header className="appbar">
         <div className="appbar-inner">
           <button
@@ -81,7 +81,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
