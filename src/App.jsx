@@ -7,6 +7,7 @@ import Home from './pages/Home.jsx'
 import Stores from './pages/Stores.jsx'
 import About from './pages/About.jsx'
 import Contact from './pages/Contact.jsx'
+import titleSvg from './assets/img/title.svg'
 
 function App() {
   const [drawerOpen, setDrawerOpen] = useState(false)
@@ -27,7 +28,7 @@ function App() {
           </button>
 
           <Link to="/" className="brand-plate" aria-label="Retour à l'accueil" style={{backgroundColor: '#0000ff'}}>
-            <img src='src/assets/img/title.svg' style={{width:'120px'}}/>
+            <img src={titleSvg} style={{width:'120px'}} alt="EuroBazar"/>
           </Link>
 
           <div className="desktop-links">
@@ -46,7 +47,7 @@ function App() {
         >
           <div className="drawer-title">
             <Link to="/" className="brand-plate" aria-label="Retour à l'accueil" style={{backgroundColor: '#0000ff88'}}>
-              <img href="/" src='src/assets/img/title.svg' style={{width:'250px'}}/>
+              <img src={titleSvg} style={{width:'250px'}} alt="EuroBazar"/>
             </Link>
             <button
               type="button"

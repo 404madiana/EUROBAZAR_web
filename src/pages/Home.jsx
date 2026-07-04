@@ -3,6 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import './leafletSetup.js'
 import shops from '../data/shops.json'
+import titleSvg from '../assets/img/title.svg'
 
 const weekdayKeys = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
 const shopList = Object.values(shops)
@@ -42,7 +43,7 @@ export default function Home() {
       <section id="center">
         <div style={{textAlign: 'center'}}>
           <p>Bienvenue chez</p>
-          <img src='src/assets/img/title.svg' style={{width:'800px'}}/>
+          <img src={titleSvg} style={{width:'800px'}} alt="EuroBazar"/>
         </div>
       </section>
 
