@@ -55,7 +55,6 @@ jobs:
       deployments: write
       pages: write
       id-token: write
-      administration: write
 
     steps:
       - name: Deploy to Pages
