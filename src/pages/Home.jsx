@@ -53,7 +53,7 @@ export default function Home() {
         <div
           id="locations"
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${shops[selected].image})`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${shops[selected].images && shops[selected].images.length > 0 ? shops[selected].images[0] : ''})`,
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
