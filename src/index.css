@@ -76,7 +76,7 @@ body {
 
 @font-face {
   font-family: 'NuberNext';
-  src: url('/EUROBAZAR_web/assets/fonts/Nuber Next/NuberNextWide-Black.otf') format('opentype');
+  src: url('/EUROBAZAR_web/assets/fonts/Nuber%20Next/NuberNextWide-Black.otf') format('opentype');
   font-weight: bolder;
   font-style: normal;
 }

@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Keep Singing';
+    src: url('KeepSinging.woff2') format('woff2'),
+        url('KeepSinging.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
