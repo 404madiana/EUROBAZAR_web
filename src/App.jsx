@@ -35,6 +35,7 @@ function App() {
             <Link to="/stores">Nos magasins</Link>
             <Link to="/about">À propos de nous</Link>
             <Link to="/contact">Nous contacter</Link>
+            <Link to="https://github.com/404madiana/EUROBAZAR_web" style={{color: '#ffff00'}}>Par ici le projet GitHub</Link>
           </div>
         </div>
 
