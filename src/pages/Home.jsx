@@ -72,15 +72,16 @@ export default function Home() {
                     setSelected(prev.id)
                   }}
                   aria-label="Ville précédente"
+                  style={{color: "#333"}}
                 />
 
-                <div className="location-content">
+                <div className="location-content" style={{color: "#333"}}>
                   {(() => {
                     const shop = shops[selected]
                     const { todayLabel, tomorrowLabel } = formatTodayTomorrowHours(shop.hours)
                     return (
                       <>
-                        <h3>{shop.name}</h3>
+                        <h3>{shop.name} {shop.city}</h3>
                         <div className="address">
                           {shop.addressLines.map((line, i) => (
                             <div key={i}>{line}</div>
@@ -103,6 +104,7 @@ export default function Home() {
                     setSelected(next.id)
                   }}
                   aria-label="Ville suivante"
+                  style={{color: "#333"}}
                 />
               </div>
 
@@ -112,7 +114,7 @@ export default function Home() {
                     key={shop.id}
                     className={`dot ${selected === shop.id ? 'current' : ''}`}
                     onClick={() => setSelected(shop.id)}
-                    aria-label={`Aller à ${shop.name}`}
+                    aria-label={`Aller à ${shop.city}`}
                   />
                 ))}
               </div>
