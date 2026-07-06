@@ -2,17 +2,19 @@
 
 La création du projet s'est fait en tapant au terminal `npm create vite@latest` (juste un mémo, pas la peine de le faire).
 
-Pour preview le site localement, `npm run dev` puis `o` pour ouvrir la page dans un nouvel onglet web.
+Pour preview le site localement, `npm run dev` pour lancer le serveur,<br>
+puis `o` pour ouvrir la page dans un nouvel onglet web.
 
 # (iana) Déploiement sur GitHub pages
 
 Le chantier du site est prévisualisable sur [https://404madiana.github.io/EUROBAZAR_web/](https://404madiana.github.io/EUROBAZAR_web/).<br>
 Ce chantier a pour principe de viualiser la construction en temps réel du site pour les non contributeurs.<br>Il serait alors un aperçu beta du rendement final lors du déploiement sur Vercel.
 
-Je tiens à remercier [sitek94](https://github.com/sitek94) avec l'[Action Deploy Vite App](https://github.com/sitek94/vite-deploy-demo) pour configurer [deploy.yml](https://github.com/404madiana/EUROBAZAR_web/blob/master/.github/workflows/deploy.yml). Ce fichier permet de build et deployer automatiquement à chaque push d'office sur la branche `master`.
+- Je tiens à remercier [sitek94](https://github.com/sitek94) avec l'[Action Deploy Vite App](https://github.com/sitek94/vite-deploy-demo) pour configurer [deploy.yml](https://github.com/404madiana/EUROBAZAR_web/blob/master/.github/workflows/deploy.yml). Ce fichier permet de build et deployer automatiquement à chaque push d'office sur la branche `master`.
+- Je tiens également la mention de [strumwolf](https://github.com/strumwolf) pour l'[Action delete-deployment-environment](https://github.com/marketplace/actions/delete-deployment-environment) qui permet de réduire l'historique des tentatives de déploiement qu'on a galéré à lancer 😅
 
+<br/>
 
-<br/><br/>
 _Ci dessous une notice en anglais généré par Vite lors de l'initiation au framework.._
 
 # React + Vite
