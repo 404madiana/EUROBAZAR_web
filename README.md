@@ -1,6 +1,6 @@
 # Site web pour EUROBAZAR
 
-## <a href="https://404madiana.github.io/EUROBAZAR_web/" target="_blank">Par ici pour voir le site.</a>   
+## [Par ici pour voir le site.](https://404madiana.github.io/EUROBAZAR_web/)
 Ceci est un projet web de vitrine numérique pour le magasin EUROBAZAR.<br>
 Le projet a pour but d'augmenter la visibilité numérique du magasin et d'ancrer l'enseigne sur Internet.
 
