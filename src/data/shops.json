@@ -1,7 +1,8 @@
 {
   "kb": {
     "id": "kb",
-    "name": "Le Kremlin-Bicêtre",
+    "name": "EUROBAZAR",
+    "city": "Le Kremlin-Bicêtre",
     "phone": "01 49 87 02 98",
     "addressLines": ["36 Avenue De Fontainebleau", "94270 Le Kremlin-Bicêtre"],
     "coords": { "lat": 48.813865, "lon": 2.361008 },
@@ -18,7 +19,8 @@
   },
   "paris": {
     "id": "paris",
-    "name": "Villejuif",
+    "name": "O'SHOPPING",
+    "city": "Villejuif",
     "phone": "06 18 78 06 99",
     "addressLines": ["84 Avenue de Stalingrad", "94800 Villejuif"],
     "coords": { "lat": 48.7832145690918, "lon": 2.3672804832458496 },
