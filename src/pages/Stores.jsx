@@ -4,6 +4,7 @@ import './leafletSetup.js'
 import shops from '../data/shops.json'
 
 const shopList = Object.values(shops)
+const shopImagesBasePath = '/src/assets/img/magasins/'
 
 function capitalize(s) {
   return s.charAt(0).toUpperCase() + s.slice(1)
@@ -71,7 +72,7 @@ Retrouvez-les ci-dessous.</p>
                   <h3>Un aperçu de EUROBAZAR {shop.name}</h3>
                   <div className="store-image-pane map-pane">
                     <img 
-                      src={shop.images[0]} 
+                      src={`${shopImagesBasePath}${shop.images[0]}`} 
                       alt={`${shop.name} showcase`}
                       style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                     />

@@ -5,6 +5,7 @@ import './leafletSetup.js'
 import shops from '../data/shops.json'
 import titleSvg from '../assets/img/title.svg'
 
+const shopImagesBasePath = '/src/assets/img/magasins/'
 const weekdayKeys = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
 const shopList = Object.values(shops)
 
@@ -53,7 +54,7 @@ export default function Home() {
         <div
           id="locations"
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${shops[selected].images && shops[selected].images.length > 0 ? shops[selected].images[0] : ''})`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${shops[selected].images && shops[selected].images.length > 0 ? `${shopImagesBasePath}${shops[selected].images[0]}` : ''})`,
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',

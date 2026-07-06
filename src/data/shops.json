@@ -2,10 +2,10 @@
   "kb": {
     "id": "kb",
     "name": "Le Kremlin-Bicêtre",
-    "phone": "01 XX XX XX XX",
+    "phone": "01 49 87 02 98",
     "addressLines": ["36 Avenue De Fontainebleau", "94270 Le Kremlin-Bicêtre"],
     "coords": { "lat": 48.813865, "lon": 2.361008 },
-    "images": ["/src/assets/img/kb_shop.webp"],
+    "images": ["kb-1.jpg","kb-2.jpg","kb-3.jpg","kb-4.jpg","kb-5.jpg","kb-6.jpg"],
     "hours": {
       "monday": "09:00 - 19:00",
       "tuesday": "09:00 - 19:00",
@@ -22,7 +22,7 @@
     "phone": "06 18 78 06 99",
     "addressLines": ["84 Avenue de Stalingrad", "94800 Villejuif"],
     "coords": { "lat": 48.7832145690918, "lon": 2.3672804832458496 },
-    "images": ["/src/assets/img/oshopping.jpg"],
+    "images": ["vj-1.jpg","vj-2.jpg"],
     "hours": {
       "monday": "15:00 - 18:00",
       "tuesday": "10:00 - 19:00",
