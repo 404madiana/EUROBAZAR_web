@@ -32,3 +32,5 @@ L'autrice du site web a planifié des étapes essentiels pour la construction du
 - [ ] (optionnel) Création des pages "Nos produits" avec base de données CashMag
 - [ ] Déploiement du site sur Vercel
 - [ ] Achat du nom de domaine
+
+Les pages vitrines sont en cours, on attend à ce qu'ils soient similaires aux images dans [penpot-plans](https://github.com/404madiana/EUROBAZAR_web/tree/master/penpot-plans).
