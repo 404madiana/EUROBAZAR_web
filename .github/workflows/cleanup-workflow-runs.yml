@@ -8,7 +8,7 @@ on:
       keep_count:
         description: 'Number of recent runs to keep per workflow'
         required: false
-        default: '3'
+        default: '2'
       workflows:
         description: 'Comma-separated list of workflow names to target (empty = all)'
         required: false

@@ -61,28 +61,52 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v5
 
-      - name: 🧹 Clean deployment environment history
+      - name: 🧹 historique
         if: always()
         continue-on-error: true
         env:
-          ENVIRONMENT_NAME: ${{ github.event.inputs.environment || 'github-pages' }}
+          KEEP_COUNT: 2
         uses: actions/github-script@v7
         with:
           script: |
-            const environmentName = process.env.ENVIRONMENT_NAME;
+            const keepCount = parseInt(process.env.KEEP_COUNT, 10) || 2;
             const { owner, repo } = context.repo;
 
-            try {
-              await github.rest.repos.deleteAnEnvironment({
-                owner,
-                repo,
-                environment_name: environmentName,
+            // historique des actions
+            await github.rest.actions.deleteWorkflowRun({
+              owner,
+              repo,
+              workflow_id: 'Deploy',
+              run_id: 'run_id_1',
+            });
+            await github.rest.actions.deleteWorkflowRun({
+              owner,
+              repo,
+              workflow_id: 'Deploy',
+              run_id: 'run_id_2',
+            });
+
+            // historique des workflows
+            await github.rest.actions.deleteWorkflow({
+              owner,
+              repo,
+              workflow_id: 'Deploy',
+            });
+
+            // historique des déploiements
+            await github.rest.repos.listDeployments({
+              owner,
+              repo,
+            }).then(({ data }) => {
+              const deployments = data.deployments || [];
+              const keepDeployments = deployments.slice(-keepCount);
+              deployments.forEach((deployment) => {
+                if (!keepDeployments.includes(deployment)) {
+                  return github.rest.repos.deleteDeployment({
+                    owner,
+                    repo,
+                    deployment_id: deployment.id,
+                  });
+                }
               });
-              core.info(`Deleted environment "${environmentName}".`);
-            } catch (error) {
-              if (error.status === 404) {
-                core.info(`Environment "${environmentName}" does not exist; nothing to delete.`);
-              } else {
-                core.warning(`Could not delete environment "${environmentName}": ${error.message}`);
-              }
-            }
+            });
