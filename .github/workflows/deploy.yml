@@ -4,9 +4,20 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
+    inputs:
+      keep_count:
+        description: Number of workflow runs to keep
+        required: false
+        default: '3'
+      workflows:
+        description: Comma-separated list of workflow names to prune
+        required: false
+        default: ''
 
 jobs:
   build:
+    if: github.event_name == 'push'
     name: Build
     runs-on: ubuntu-latest
 
@@ -35,26 +46,8 @@ jobs:
         with:
           path: ./dist
 
-  deploy:
-    name: Deploy to GitHub Pages
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    permissions:
-      actions: write
-      contents: read
-      deployments: write
-      pages: write
-      id-token: write
-
-    steps:
-      - name: Deploy to Pages
-        id: deployment
-        uses: actions/deploy-pages@v5
-
   cleanup:
+    if: github.event_name == 'workflow_dispatch'
     name: Cleanup workflow runs
     runs-on: ubuntu-latest
     permissions:
@@ -62,7 +55,7 @@ jobs:
       contents: read
 
     steps:
-      - name: Checkout (for workspace context)
+      - name: Checkout repo
         uses: actions/checkout@v4
 
       - name: Prune workflow runs
