@@ -11,7 +11,7 @@ export default function Help() {
   useEffect(() => {
     const loadNotices = async () => {
       try {
-        const modules = import.meta.glob('../notices/*.md', { as: 'raw' })
+        const modules = import.meta.glob('../notices/*.md', { query: '?raw', import: 'default' })
         const noticesList = Object.keys(modules).map(path => {
           const filename = path.split('/').pop().replace('.md', '')
           return {
@@ -36,7 +36,7 @@ export default function Help() {
     if (selectedNotice) {
       const loadContent = async () => {
         try {
-          const modules = import.meta.glob('../notices/*.md', { as: 'raw' })
+          const modules = import.meta.glob('../notices/*.md', { query: '?raw', import: 'default' })
           const notice = notices.find(n => n.id === selectedNotice)
           if (notice) {
             const module = await modules[notice.path]()
