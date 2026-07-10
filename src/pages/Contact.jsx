@@ -1,36 +1,59 @@
+import shops from '../data/shops.json'
+
+const weekdayKeys = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi']
+
+function capitalize(s) {
+  return s.charAt(0).toUpperCase() + s.slice(1)
+}
+
+function formatTodayTomorrowHours(hoursObj) {
+  const today = new Date().getDay()
+  const todayKey = weekdayKeys[today]
+  const tomorrowKey = weekdayKeys[(today + 1) % 7]
+  return {
+    todayLabel: `${capitalize(todayKey)} : ${hoursObj[todayKey] || 'Fermé'}`,
+    tomorrowLabel: `${capitalize(tomorrowKey)} : ${hoursObj[tomorrowKey] || 'Fermé'}`,
+  }
+}
+
+const shopList = Object.values(shops)
+
 export default function Contact() {
   return (
     <section className="page-content">
       <header className="page-header">
         <p className="eyebrow">Nous</p>
         <h1>contacter</h1>
-        <p>Une question, une demande ou besoin d'un renseignement ? Écrivez-nous ou passez en boutique.</p>
+        <p>Pour les appels téléphoniques, veuillez prendre connaissance des horaires des magasins.</p>
+        <p>PRO TIP : Vous pouvez nous joindre directement au magasin EUROBAZAR :^)</p>
       </header>
 
-      <div className="contact-grid">
-        <div className="contact-card">
-          <h2>Informations</h2>
-          <p>Téléphone : <strong>+33 1 23 45 67 89</strong></p>
-          <p>Email : <strong>contact@eurobazar.example</strong></p>
-          <p>Adresse : <strong>5 rue du Commerce, 75001 Paris</strong></p>
-          <p>Horaires du service client : 9h - 18h du lundi au vendredi</p>
+      <div className="paragraphe">
+        <h2>Horaires</h2>
+        <div className="store-hours contact-store-hours">
+          {shopList.map((shop) => {
+            const { todayLabel, tomorrowLabel } = formatTodayTomorrowHours(shop.hours)
+            return (
+              <div key={shop.id}>
+                <h3>{shop.name} {shop.city}</h3>
+                <div className="hours">
+                  <div>{todayLabel}</div>
+                  <div>{tomorrowLabel}</div>
+                </div>
+                <div className="weekly-hours">
+                  <strong>La semaine</strong>
+                  <ul>
+                    {Object.entries(shop.hours).map(([day, hours]) => (
+                      <li key={day}>
+                        {capitalize(day)} : {hours || 'Fermé'}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            )
+          })}
         </div>
-
-        <form className="contact-form">
-          <label>
-            Votre nom
-            <input type="text" placeholder="Nom" />
-          </label>
-          <label>
-            Votre email
-            <input type="email" placeholder="email@example.com" />
-          </label>
-          <label>
-            Votre message
-            <textarea placeholder="Votre message..." rows="6" />
-          </label>
-          <button type="submit">Envoyer</button>
-        </form>
       </div>
     </section>
   )

@@ -6,7 +6,7 @@ import shops from '../data/shops.json'
 import titleSvg from '../assets/img/title.svg'
 
 const shopImagesBasePath = '/src/assets/img/magasins/'
-const weekdayKeys = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
+const weekdayKeys = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi']
 const shopList = Object.values(shops)
 
 function capitalize(s) {

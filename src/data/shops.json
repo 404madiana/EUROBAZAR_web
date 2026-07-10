@@ -8,13 +8,13 @@
     "coords": { "lat": 48.813865, "lon": 2.361008 },
     "images": ["kb-1.jpg","kb-2.jpg","kb-3.jpg","kb-4.jpg","kb-5.jpg","kb-6.jpg"],
     "hours": {
-      "monday": "09:00 - 19:00",
-      "tuesday": "09:00 - 19:00",
-      "wednesday": "09:00 - 19:00",
-      "thursday": "09:00 - 19:00",
-      "friday": "09:00 - 19:00",
-      "saturday": "09:00 - 19:00",
-      "sunday": "09:00 - 19:00"
+      "lundi": "09:00 - 19:00",
+      "mardi": "09:00 - 19:00",
+      "mercredi": "09:00 - 19:00",
+      "jeudi": "09:00 - 19:00",
+      "vendredi": "09:00 - 19:00",
+      "samedi": "09:00 - 19:00",
+      "dimanche": "09:00 - 19:00"
     }
   },
   "paris": {
@@ -26,13 +26,13 @@
     "coords": { "lat": 48.7832145690918, "lon": 2.3672804832458496 },
     "images": ["vj-1.jpg","vj-2.jpg"],
     "hours": {
-      "monday": "15:00 - 18:00",
-      "tuesday": "10:00 - 19:00",
-      "wednesday": "10:00 - 19:00",
-      "thursday": "10:00 - 19:00",
-      "friday": "10:00 - 19:00",
-      "saturday": "10:00 - 19:00",
-      "sunday": "Fermé"
+      "lundi": "15:00 - 18:00",
+      "mardi": "10:00 - 19:00",
+      "mercredi": "10:00 - 19:00",
+      "jeudi": "10:00 - 19:00",
+      "vendredi": "10:00 - 19:00",
+      "samedi": "10:00 - 19:00",
+      "dimanche": "Fermé"
     }
   }
 }
