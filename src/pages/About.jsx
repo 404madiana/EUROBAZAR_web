@@ -75,10 +75,10 @@ export default function About() {
       </div>
       <div className="social-block">
         <h2>Une question ?</h2>
-        <div className="desktop-links">
-            <Link to="/stores">Contactez-nous !</Link>
-            <Link to="/about">Centre d'aide</Link>
-          </div>
+        <div className="desktop-links panneau">
+          <Link to="/contact">Contactez-nous !</Link>
+          <Link to="/help">Centre d'aide</Link>
+        </div>
       </div>
     </section>
   )

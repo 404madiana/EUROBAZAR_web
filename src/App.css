@@ -122,6 +122,7 @@ h1 {
   padding: 26px 20px;
   display: flex;
   flex-direction: column;
+  backdrop-filter: blur(8px);
 }
 
 .drawer.open {
@@ -629,4 +630,116 @@ h1 {
   padding: 16px 20px;
   border-radius: 14px;
   background-color: var(--appbar-btn-bg);
+}
+.panneau a {
+  padding: 16px 20px;
+  border-radius: 14px;
+  background-color: var(--appbar-btn-bg);
+}
+
+/* Help Grid Layout */
+.help-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 40px;
+  margin-top: 32px;
+}
+
+.help-sidebar {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.help-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.help-nav-item {
+  padding: 12px 16px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  color: var(--text-h, #111827);
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.help-nav-item:hover {
+  background-color: var(--accent-bg, #f5f3ff);
+}
+
+.help-nav-item.active {
+  background-color: var(--accent-bg, #f5f3ff);
+  color: var(--accent, #5b21b6);
+  border-left-color: var(--accent, #5b21b6);
+  font-weight: 600;
+}
+
+.help-content {
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.help-content h1 {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.help-content h2 {
+  margin-top: 32px;
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.help-content p {
+  margin-bottom: 16px;
+  color: var(--text, #374151);
+}
+
+.help-content ul,
+.help-content ol {
+  margin-bottom: 16px;
+  padding-left: 24px;
+}
+
+.help-content li {
+  margin-bottom: 8px;
+  color: var(--text, #374151);
+}
+
+@media (max-width: 768px) {
+  .help-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .help-sidebar {
+    position: static;
+    top: auto;
+  }
+
+  .help-nav {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .help-nav-item {
+    white-space: nowrap;
+    font-size: 14px;
+  }
 }

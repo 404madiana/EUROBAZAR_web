@@ -7,6 +7,7 @@ import Home from './pages/Home.jsx'
 import Stores from './pages/Stores.jsx'
 import About from './pages/About.jsx'
 import Contact from './pages/Contact.jsx'
+import Help from './pages/Help.jsx'
 import titleSvg from './assets/img/title.svg'
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
             <Link to="/stores">Nos magasins</Link>
             <Link to="/about">À propos de nous</Link>
             <Link to="/contact">Nous contacter</Link>
+            <Link to="/help">Centre d'aide</Link>
             <Link to="https://github.com/404madiana/EUROBAZAR_web" style={{color: '#ffff00'}}>Par ici le projet GitHub</Link>
           </div>
         </div>
@@ -69,6 +71,9 @@ function App() {
             <Link to="/contact" onClick={() => setDrawerOpen(false)}>
               Nous contacter
             </Link>
+            <Link to="/help" onClick={() => setDrawerOpen(false)}>
+              Centre d'aide
+            </Link>
           </nav>
         </div>
 
@@ -81,6 +86,7 @@ function App() {
           <Route path="/stores" element={<Stores />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/help" element={<Help />} />
         </Routes>
       </main>
     </HashRouter>
