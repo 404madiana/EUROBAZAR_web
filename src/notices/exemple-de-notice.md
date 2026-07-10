@@ -16,9 +16,4 @@ La fonctionnalité d'affichge Markdown est inspiré des README modifiables sur G
 
 Tout ce qui est affiché ici est pratiquement le même contenu que sur le fichier originel. La seule différence est que le fichier originel comporte des caractères de ponctuation pour enrichir le texte ici (titres, **gras**/*italique*/`code`...).
 
-- Terme de bail
-- Conditions de paiement
-- Responsabilités du locataire
-- Assurances requises
-
-Donec vel purus volutpat, consequat elit id, malesuada mauris.
+[Par ici pour les fichiers markdown du site (GitHub).](https://github.com/404madiana/EUROBAZAR_web/tree/master/src/pages)
