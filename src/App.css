@@ -593,7 +593,6 @@ h1 {
   }
 }
 
-
 .about-profile {
   display: flex;
   padding: 32px;
@@ -612,4 +611,22 @@ h1 {
 .about-profile img {
   padding: 20px;
   height: 30em;
+}
+
+/* ====== */
+.social-block {
+  padding: 6vh 10vh;
+  border: 1px solid var(--text);
+  display: block;
+  text-align: center;
+  align-items: center;
+}
+.social-block .desktop-links {
+  font-size: larger;
+  justify-content: center;
+}
+.social-block a {
+  padding: 16px 20px;
+  border-radius: 14px;
+  background-color: var(--appbar-btn-bg);
 }

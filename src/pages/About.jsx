@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 function CopyableBlock({ content, label }) {
   const [copied, setCopied] = useState(false)
 
@@ -51,7 +52,7 @@ export default function About() {
       </header>
 
       <div className="paragraphe">
-        <p>EUROBAZAR est un ensemble de commerces alimentaire et ménagère depuis 1993, se situant principalement dans le département du Val-de-Marne.</p>
+        <p>EUROBAZAR est un ensemble de commerces alimentaire et ménagère depuis 1995, se situant principalement dans le département du Val-de-Marne.</p>
         <p>
           Depuis notre création, nous avons à cœur de proposer une expérience d'achat simple.
           Nos boutiques sont conçues pour vous aider à trouver des produits originaux, du quotidien aux découvertes du moment.
@@ -64,23 +65,20 @@ export default function About() {
         <div className="paragraphe">
           <h3>Saïd DOUICH</h3>
           <p>
-            Lorem Ipsum Dolor Sit Amet,
-Consectetur Adipiscing Elit. Fusce
-Viverra, Purus Vulputate
-Fermentum Pharetra, Orci Dui
-Hendrerit Nisi, In Euismod Orci
-Arcu Posuere Nunc. Duis
-Consectetur Euismod Elit Ut
-Posuere. Nullam Tincidunt Sit Amet
-Ligula Eu Auctor. Duis Placerat Eu
-Massa Vitae Aliquet. Sed Sit Amet
-Ullamcorper Dolor.
+            Gérant d'EUROBAZAR depuis juin 2015, il est en tête de tous la gestion et services relatifs au sein du magazin.
           </p>
           <div className='pied'><CopyableBlock content="06 18 78 06 99" label="Copier le numéro" /></div>
         </div>
         <div className="store-image-pane">
           <img src="src/assets/img/favicon.png" style={{height: "48vh"}}></img>
         </div>
+      </div>
+      <div className="social-block">
+        <h2>Une question ?</h2>
+        <div className="desktop-links">
+            <Link to="/stores">Contactez-nous !</Link>
+            <Link to="/about">Centre d'aide</Link>
+          </div>
       </div>
     </section>
   )
