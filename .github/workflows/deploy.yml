@@ -3,14 +3,7 @@ name: Deploy
 on:
   push:
     branches:
-      - main
       - master
-  workflow_dispatch:
-    inputs:
-      environment:
-        description: 'Environment to clean up'
-        required: false
-        default: 'github-pages'
 
 jobs:
   build:
@@ -61,52 +54,65 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v5
 
-      - name: 🧹 historique
-        if: always()
-        continue-on-error: true
-        env:
-          KEEP_COUNT: 2
+  cleanup:
+    name: Cleanup workflow runs
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+      contents: read
+
+    steps:
+      - name: Checkout (for workspace context)
+        uses: actions/checkout@v4
+
+      - name: Prune workflow runs
         uses: actions/github-script@v7
+        env:
+          KEEP_COUNT: ${{ github.event.inputs.keep_count || '3' }}
+          WORKFLOWS: ${{ github.event.inputs.workflows || '' }}
         with:
           script: |
-            const keepCount = parseInt(process.env.KEEP_COUNT, 10) || 2;
+            const keepCount = parseInt(process.env.KEEP_COUNT, 10) || 3;
+            const workflowsFilter = (process.env.WORKFLOWS || '').split(',').map(s => s.trim()).filter(Boolean);
             const { owner, repo } = context.repo;
 
-            // historique des actions
-            await github.rest.actions.deleteWorkflowRun({
-              owner,
-              repo,
-              workflow_id: 'Deploy',
-              run_id: 'run_id_1',
-            });
-            await github.rest.actions.deleteWorkflowRun({
-              owner,
-              repo,
-              workflow_id: 'Deploy',
-              run_id: 'run_id_2',
-            });
+            core.info(`Keeping ${keepCount} runs per workflow.`);
+            if (workflowsFilter.length) core.info(`Filtering workflows: ${workflowsFilter.join(', ')}`);
 
-            // historique des workflows
-            await github.rest.actions.deleteWorkflow({
-              owner,
-              repo,
-              workflow_id: 'Deploy',
-            });
+            // Fetch all workflows in the repo
+            const wfResp = await github.rest.actions.listRepoWorkflows({ owner, repo });
+            const workflows = wfResp.data.workflows || [];
 
-            // historique des déploiements
-            await github.rest.repos.listDeployments({
-              owner,
-              repo,
-            }).then(({ data }) => {
-              const deployments = data.deployments || [];
-              const keepDeployments = deployments.slice(-keepCount);
-              deployments.forEach((deployment) => {
-                if (!keepDeployments.includes(deployment)) {
-                  return github.rest.repos.deleteDeployment({
-                    owner,
-                    repo,
-                    deployment_id: deployment.id,
-                  });
+            for (const wf of workflows) {
+              try {
+                if (workflowsFilter.length && !workflowsFilter.includes(wf.name)) {
+                  core.info(`Skipping workflow: ${wf.name}`);
+                  continue;
                 }
-              });
-            });
+
+                core.info(`Processing workflow: ${wf.name} (id=${wf.id})`);
+
+                // List workflow runs (most recent first)
+                const runsResp = await github.rest.actions.listWorkflowRuns({ owner, repo, workflow_id: wf.id, per_page: 100 });
+                const runs = runsResp.data.workflow_runs || [];
+
+                if (runs.length <= keepCount) {
+                  core.info(`No runs to delete for ${wf.name} (found ${runs.length}).`);
+                  continue;
+                }
+
+                const toDelete = runs.slice(keepCount);
+                core.info(`Deleting ${toDelete.length} runs for workflow ${wf.name}.`);
+
+                for (const run of toDelete) {
+                  try {
+                    await github.rest.actions.deleteWorkflowRun({ owner, repo, run_id: run.id });
+                    core.info(`Deleted run ${run.id} (${run.head_branch || run.name || 'n/a'})`);
+                  } catch (err) {
+                    core.warning(`Failed to delete run ${run.id}: ${err.message}`);
+                  }
+                }
+              } catch (err) {
+                core.warning(`Failed processing workflow ${wf.name}: ${err.message}`);
+              }
+            }
