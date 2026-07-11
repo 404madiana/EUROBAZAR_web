@@ -117,7 +117,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Clean workflow runs
-        uses: peter-evans/clean-github-actions@v1.1.0
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          keep-n: 2
+        run: |
+          echo "::set-env::GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}"
+          git fetch --prune --unshallow
+          git branch -D $(git branch --sort=-committerdate | sed -n '2,$s/^\s*[^*]*\*\s*\(.*\)/\1/p')
