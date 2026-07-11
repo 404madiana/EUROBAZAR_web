@@ -45,6 +45,49 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
+  clean-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clean deployment history
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const octokit = require('@octokit/rest');
+            const { context } = require('@actions/github');
+
+            const octokit = new octokit();
+            octokit.authenticate({
+              token: process.env.GITHUB_TOKEN
+            });
+
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const deploymentId = context.payload.deployment_id;
+
+            // Supprime tous les déploiements sauf le dernier
+            octokit.repos.listDeployments({
+              owner,
+              repo,
+              per_page: 100, // Nombre maximal de déploiements à récupérer
+              page: 1
+            })
+              .then(({ data }) => {
+                const sortedDeployments = data.deployments.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+                const latestDeploymentId = sortedDeployments[0].id;
+
+                if (deploymentId !== latestDeploymentId) {
+                  octokit.repos.deleteDeployment({
+                    owner,
+                    repo,
+                    deployment_id: deploymentId
+                  });
+                }
+              })
+              .catch(error => {
+                console.error(error);
+              });
   clean-runs:
     runs-on: ubuntu-latest
 
