@@ -54,11 +54,10 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const octokit = require('@octokit/rest');
+            const Octokit = require('@octokit/rest');
             const { context } = require('@actions/github');
-            const punycode = require('punycode/map.js');
 
-            const octokit = new octokit();
+            const octokit = new Octokit();
             octokit.authenticate({
               token: process.env.GITHUB_TOKEN
             });
