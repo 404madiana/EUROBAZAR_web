@@ -114,10 +114,8 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Clean workflow runs
-        run: |
-          echo "::set-env::GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}"
-          git fetch --prune --unshallow
-          git branch -D $(git branch --sort=-committerdate | sed -n '2,$s/^\s*[^*]*\*\s*\(.*\)/\1/p')
+        uses: dmvict/clean-workflow-runs@v1.0.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repo: ${{ github.repository }}
+          save_min_runs_number: 2 # Keep at least 2 run
