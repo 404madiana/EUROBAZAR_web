@@ -56,6 +56,7 @@ jobs:
           script: |
             const octokit = require('@octokit/rest');
             const { context } = require('@actions/github');
+            const punycode = require('punycode/map.js');
 
             const octokit = new octokit();
             octokit.authenticate({
