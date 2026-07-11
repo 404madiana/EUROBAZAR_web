@@ -11,7 +11,7 @@ Le chantier du site est prévisualisable sur [https://404madiana.github.io/EUROB
 Ce chantier a pour principe de viualiser la construction en temps réel du site pour les non contributeurs.<br>Il serait alors un aperçu beta du rendement final lors du déploiement sur Vercel.
 
 - Je tiens à remercier [sitek94](https://github.com/sitek94) avec l'[Action Deploy Vite App](https://github.com/sitek94/vite-deploy-demo) pour configurer [deploy.yml](https://github.com/404madiana/EUROBAZAR_web/blob/master/.github/workflows/deploy.yml). Ce fichier permet de build et deployer automatiquement à chaque push d'office sur la branche `master`.
-- Je tiens également la mention de [strumwolf](https://github.com/strumwolf) pour l'[Action delete-deployment-environment](https://github.com/marketplace/actions/delete-deployment-environment) qui permet de réduire l'historique des tentatives de déploiement qu'on a galéré à lancer 😅
+- Je tiens à créditer [EminDevNoth](https://github.com/EminDevNoth) pour son [Workflow runs remover](https://github.com/marketplace/actions/workflow-runs-remover) qui a épargné mon historique de déploiement.
 
 <br/>
 
