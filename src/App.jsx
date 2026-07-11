@@ -8,7 +8,7 @@ import Stores from './pages/Stores.jsx'
 import About from './pages/About.jsx'
 import Contact from './pages/Contact.jsx'
 import Help from './pages/Help.jsx'
-import titleSvg from './assets/img/title.svg'
+import titleSvg from './../public/assets/img/title.svg'
 
 function App() {
   const [drawerOpen, setDrawerOpen] = useState(false)

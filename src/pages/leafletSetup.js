@@ -4,7 +4,7 @@ import markerIcon from 'leaflet/dist/images/marker-icon.png'
 import markerShadow from 'leaflet/dist/images/marker-shadow.png'
 
 L.Icon.Default.mergeOptions({
-  iconUrl: '../assets/img/favicon.png',
+  iconUrl: '../../public/assets/img/favicon.png',
   shadowUrl: markerShadow,
   iconSize: [40, 40]
 })

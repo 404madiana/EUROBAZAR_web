@@ -5,7 +5,7 @@ import './leafletSetup.js'
 import shops from '../data/shops.json'
 
 const shopList = Object.values(shops)
-const shopImagesBasePath = '/src/assets/img/magasins/'
+const shopImagesBasePath = '/public/assets/img/magasins/'
 
 function capitalize(s) {
   return s.charAt(0).toUpperCase() + s.slice(1)
