@@ -3,9 +3,9 @@ import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import './leafletSetup.js'
 import shops from '../data/shops.json'
-import titleSvg from '../public/assets/img/title.svg'
+import titleSvg from '../assets/img/title.svg'
 
-const shopImagesBasePath = '/public/assets/img/magasins/'
+const shopImagesBasePath = '/src/assets/img/magasins/'
 const weekdayKeys = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi']
 const shopList = Object.values(shops)
 
