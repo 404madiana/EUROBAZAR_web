@@ -109,3 +109,15 @@ jobs:
                 core.warning(`Failed processing workflow ${wf.name}: ${err.message}`);
               }
             }
+  clean-runs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Clean workflow runs
+        uses: peter-evans/clean-github-actions@v1.1.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          keep-n: 2
