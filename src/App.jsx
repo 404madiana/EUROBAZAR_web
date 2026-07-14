@@ -1,7 +1,8 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { HashRouter, Routes, Route, Link } from 'react-router-dom'
 import './App.css'
 import './index.css'
+import './footer.css'
 import './locations.css'
 import Home from './pages/Home.jsx'
 import Stores from './pages/Stores.jsx'
@@ -9,6 +10,7 @@ import About from './pages/About.jsx'
 import Contact from './pages/Contact.jsx'
 import Help from './pages/Help.jsx'
 import titleSvg from './../public/assets/img/title.svg'
+import Footer from './Footer.jsx';
 
 function App() {
   const [drawerOpen, setDrawerOpen] = useState(false)
@@ -37,7 +39,6 @@ function App() {
             <Link to="/about">À propos de nous</Link>
             <Link to="/contact">Nous contacter</Link>
             <Link to="/help">Centre d'aide</Link>
-            <Link to="https://github.com/404madiana/EUROBAZAR_web" style={{color: '#ffff00'}}>Par ici le projet GitHub</Link>
           </div>
         </div>
 
@@ -89,6 +90,8 @@ function App() {
           <Route path="/help" element={<Help />} />
         </Routes>
       </main>
+      <div className="ticks" />
+      <Footer />
     </HashRouter>
   )
 }

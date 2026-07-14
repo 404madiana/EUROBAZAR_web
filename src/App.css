@@ -425,7 +425,6 @@ h1 {
 }
 
 .paragraphe {
-  border: 1px solid var(--text);
   padding: 24px;
 }
 

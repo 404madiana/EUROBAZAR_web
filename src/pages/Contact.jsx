@@ -11,8 +11,8 @@ function formatTodayTomorrowHours(hoursObj) {
   const todayKey = weekdayKeys[today]
   const tomorrowKey = weekdayKeys[(today + 1) % 7]
   return {
-    todayLabel: `${capitalize(todayKey)} : ${hoursObj[todayKey] || 'Fermé'}`,
-    tomorrowLabel: `${capitalize(tomorrowKey)} : ${hoursObj[tomorrowKey] || 'Fermé'}`,
+    todayLabel: `Aujourd'hui : ${hoursObj[todayKey] || 'Fermé'}`,
+    tomorrowLabel: `Demain : ${hoursObj[tomorrowKey] || 'Fermé'}`,
   }
 }
 
@@ -25,7 +25,7 @@ export default function Contact() {
         <p className="eyebrow">Nous</p>
         <h1>contacter</h1>
         <p>Pour les appels téléphoniques, veuillez prendre connaissance des horaires des magasins.</p>
-        <p>PRO TIP : Vous pouvez nous joindre directement au magasin EUROBAZAR :^)</p>
+        <p>PRO TIP : Vous pouvez nous joindre directement au magasin EUROBAZAR Kremlin-Bicêtre :^)</p>
       </header>
 
       <div className="paragraphe">

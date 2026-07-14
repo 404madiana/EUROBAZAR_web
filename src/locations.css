@@ -5,7 +5,7 @@
 .location-content { flex: 1; padding: 0 16px; border-radius: 4px}
 .location-content h3 { margin: 0 0 12px; font-size: 20px; }
 .address { margin-bottom: 12px; }
-.hours { margin-bottom: 12px; font-weight: 500; }
+.hours { margin-bottom: 12px; font-weight: 400; font-size: larger;}
 /* shop-image removed - background used instead */
 
 /* arrows replacing squares */

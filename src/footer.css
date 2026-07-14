@@ -1,0 +1,29 @@
+footer {
+    background-color: var(--title-bg);
+    color: white;
+    border-top: 1px solid var(--border, #e2e8f0);
+    padding: 10vh 30px;
+    display: flex;
+    gap: 40px;
+}
+
+footer .siege {
+    text-align: right;
+    width: 40%;
+}
+
+footer .carrefour {
+    padding-left: 30px;
+    border-left: 1px solid var(--border, #e2e8f0);
+}
+
+footer .desktop-links {
+    gap: 6px;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+footer .desktop-links a {
+    font-size: 100%;
+    color: white;
+}
