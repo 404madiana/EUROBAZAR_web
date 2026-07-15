@@ -45,10 +45,17 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
-  clean-deploy:
+  clean-runs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Delete Workflow Runs
+        uses: EminDevNoth/workflow-runs-remover@v1.0.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Clean deployment history
         uses: actions/github-script@v6
         with:
@@ -67,10 +74,11 @@ jobs:
             const repo = context.repo.repo;
             const deploymentId = context.payload.deployment_id;
 
+            // Supprime tous les déploiements sauf le dernier
             octokit.repos.listDeployments({
               owner,
               repo,
-              per_page: 100,
+              per_page: 100, // Nombre maximal de déploiements à récupérer
               page: 1
             })
               .then(({ data }) => {
@@ -88,14 +96,3 @@ jobs:
               .catch(error => {
                 console.error(error);
               });
-  clean-runs:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Delete Workflow Runs
-        uses: EminDevNoth/workflow-runs-remover@v1.0.0
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
