@@ -47,6 +47,7 @@ jobs:
           path: ./dist
   clean-runs:
     runs-on: ubuntu-latest
+    permissions: write-all
 
     steps:
       - name: Checkout
@@ -56,43 +57,10 @@ jobs:
         uses: EminDevNoth/workflow-runs-remover@v1.0.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Clean deployment history
-        uses: actions/github-script@v6
+
+      - name: 🗑 Delete deployment
+        uses: strumwolf/delete-deployment-environment@v2
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const octokit = require('@octokit/rest');
-            const { context } = require('@actions/github');
-            const punycode = require('punycode/map.js');
-
-            const octokit = new octokit();
-            octokit.authenticate({
-              token: process.env.GITHUB_TOKEN
-            });
-
-            const owner = context.repo.owner;
-            const repo = context.repo.repo;
-            const deploymentId = context.payload.deployment_id;
-
-            // Supprime tous les déploiements sauf le dernier
-            octokit.repos.listDeployments({
-              owner,
-              repo,
-              per_page: 100, // Nombre maximal de déploiements à récupérer
-              page: 1
-            })
-              .then(({ data }) => {
-                const sortedDeployments = data.deployments.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
-                const latestDeploymentId = sortedDeployments[0].id;
-
-                if (deploymentId !== latestDeploymentId) {
-                  octokit.repos.deleteDeployment({
-                    owner,
-                    repo,
-                    deployment_id: deploymentId
-                  });
-                }
-              })
-              .catch(error => {
-                console.error(error);
-              });
+          token: ${{ secrets.GITHUB_TOKEN }}
+          environment: github-pages
+          onlyRemoveDeployments: true
