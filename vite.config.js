@@ -4,7 +4,7 @@ import babel from '@rolldown/plugin-babel'
 
 // https://vite.dev/config/
 export default defineConfig(({ command }) => ({
-  base: '/EUROBAZAR_web/',
+  base: command === 'serve' ? '/' : '/EUROBAZAR_web/',
   plugins: [
     react(),
     babel({ presets: [reactCompilerPreset()] })
