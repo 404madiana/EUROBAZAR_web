@@ -70,7 +70,7 @@ export default function About() {
           <div className='pied'><CopyableBlock content="06 18 78 06 99" label="Copier le numéro" /></div>
         </div>
         <div className="store-image-pane">
-          <img src="public/assets/images/favicon.png" style={{height: "48vh"}}></images>
+          <img src="public/assets/images/favicon.png" style={{height: "48vh"}}></img>
         </div>
       </div>
       <div className="social-block">
