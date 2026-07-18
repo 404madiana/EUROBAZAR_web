@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "deploy": "gh-pages -d docs/assets/images",
+    "deploy": "gh-pages -d src/assets/images",
     "predeploy": "npm run build",
     "build": "vite build",
     "lint": "eslint .",
