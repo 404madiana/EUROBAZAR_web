@@ -6,7 +6,7 @@ import shops from '../data/shops.json'
 import titleSvg from '../assets/images/title.svg'
 import { Link } from 'react-router-dom'
 
-const shopImagesBasePath = './src/assets/images/magasins/'
+const shopImagesBasePath = './assets/images/magasins/'
 const weekdayKeys = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi']
 const shopList = Object.values(shops)
 
