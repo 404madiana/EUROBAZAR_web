@@ -3,10 +3,10 @@ import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import './leafletSetup.js'
 import shops from '../data/shops.json'
-import titleSvg from '../assets/img/title.svg'
+import titleSvg from '../assets/images/title.svg'
 import { Link } from 'react-router-dom'
 
-const shopImagesBasePath = '/src/assets/img/magasins/'
+const shopImagesBasePath = './src/assets/images/magasins/'
 const weekdayKeys = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi']
 const shopList = Object.values(shops)
 
