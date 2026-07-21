@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
-import { HashRouter, Routes, Route, Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { HashRouter, Routes, Route, Link, useLocation, Navigate } from 'react-router-dom'
 import './App.css'
+import './pages.css'
 import './index.css'
 import './footer.css'
 import './locations.css'
@@ -9,8 +10,10 @@ import Stores from './pages/Stores.jsx'
 import About from './pages/About.jsx'
 import Contact from './pages/Contact.jsx'
 import Help from './pages/Help.jsx'
-import titleSvg from './../public/assets/images/title.svg'
+import titleSvg from '/assets/images/title.svg'
 import Footer from './Footer.jsx';
+import NotFound from './404.jsx'
+import Reset404Counter from './Reset404Counter.jsx'
 
 function App() {
   const [drawerOpen, setDrawerOpen] = useState(false)
@@ -31,7 +34,7 @@ function App() {
           </button>
 
           <Link to="/" className="brand-plate" aria-label="Retour à l'accueil" style={{backgroundColor: '#0000ff'}}>
-            <img src={titleSvg} style={{width:'120px'}} alt="EuroBazar"/>
+            <img src={titleSvg} className="logo-header" alt="EuroBazar"/>
           </Link>
 
           <div className="desktop-links">
@@ -51,7 +54,7 @@ function App() {
         >
           <div className="drawer-title">
             <Link to="/" className="brand-plate" aria-label="Retour à l'accueil" style={{backgroundColor: '#0000ff88'}}>
-              <img src={titleSvg} style={{width:'250px'}} alt="EuroBazar"/>
+              <img src={titleSvg} className="logo-drawer" alt="EuroBazar"/>
             </Link>
             <button
               type="button"
@@ -81,13 +84,16 @@ function App() {
         <div className={`drawer-backdrop ${drawerOpen ? 'visible' : ''}`} onClick={() => setDrawerOpen(false)} />
       </header>
 
-      <main className="main-title">
+      <main className="main-page">
+        <Reset404Counter />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/stores" element={<Stores />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/help" element={<Help />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <div className="ticks" />

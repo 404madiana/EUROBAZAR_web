@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import './leafletSetup.js'
 import shops from '../data/shops.json'
-import titleSvg from '../assets/images/title.svg'
+import titleSvg from '/assets/images/title.svg'
 import { Link } from 'react-router-dom'
 
 const shopImagesBasePath = './assets/images/magasins/'
@@ -45,7 +45,7 @@ export default function Home() {
       <section id="center">
         <div style={{textAlign: 'center'}}>
           <p>Bienvenue chez</p>
-          <img src={titleSvg} style={{width:'800px'}} alt="EuroBazar"/>
+          <img src={titleSvg} className="logo-hero" alt="EuroBazar"/>
         </div>
       </section>
 
@@ -53,6 +53,7 @@ export default function Home() {
 
       <section id="main-content">
         <div
+          className="paragraphe"
           id="locations"
           style={{
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${shops[selected].images && shops[selected].images.length > 0 ? `${shopImagesBasePath}${shops[selected].images[0]}` : ''})`,

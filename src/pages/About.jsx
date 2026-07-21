@@ -61,16 +61,18 @@ export default function About() {
           Notre équipe travaille chaque jour pour offrir un service chaleureux, des conseils personnalisés et des services de proximité.
         </p>
       </div>
-      <div className="about-profile">
-        <div className="paragraphe">
+      <div className="ticks" />
+      <div className="about-profile paragraphe">
+        <div>
           <h3>Saïd DOUICH</h3>
           <p>
-            Gérant d'EUROBAZAR depuis juin 2015, il est en tête de tous la gestion et services relatifs au sein du magazin.
+            Gérant d'EUROBAZAR depuis juin 2015,
+            il est en tête de tous la gestion et services relatifs au sein du magazin.
           </p>
           <div className='pied'><CopyableBlock content="06 18 78 06 99" label="Copier le numéro" /></div>
         </div>
         <div className="store-image-pane">
-          <img src="./assets/images/favicon.png" style={{height: "48vh"}}></img>
+          <img src="./assets/images/favicon.png" className="about-image"></img>
         </div>
       </div>
       <div className="social-block">

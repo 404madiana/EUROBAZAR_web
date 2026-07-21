@@ -70,9 +70,9 @@ function StoreSection({ shop }) {
   }
 
   return (
-    <div key={shop.id} className="store-section">
+    <div key={shop.id} className="store">
       {/* Info + Map */}
-      <div className="store-info-map">
+      <div className="paragraphe store-info-map">
         <div className="store-info">
           <h2>{shop.name}</h2>
           <h2>{shop.city}</h2>
@@ -120,32 +120,31 @@ function StoreSection({ shop }) {
 
       {/* Showcase Image */}
       <div className="store-showcase">
-        <button
+        <div className="header">
+          <button
           className="arrow left"
           onClick={prevImage}
           aria-label="Image précédente"
-        />
-
-        <div className="location-content">
-          {n > 0 && (
-            <div className="store-showcase-content">
-              <h3>Un aperçu de {shop.name} {shop.city}</h3>
-              <div className="store-image-pane map-pane">
-                <img
-                  src={`${shopImagesBasePath}${images[imgIndex]}`}
-                  alt={`${shop.city} showcase`}
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                />
-              </div>
-            </div>
-          )}
+          />
+          
+          <h3>Un aperçu de {shop.name} {shop.city}</h3>
+          
+          <button
+            className="arrow right"
+            onClick={nextImage}
+            aria-label="Image suivante"
+          />
         </div>
 
-        <button
-          className="arrow right"
-          onClick={nextImage}
-          aria-label="Image suivante"
-        />
+        {n > 0 && (
+          <div className="store-image-pane map-pane">
+            <img
+              src={`${shopImagesBasePath}${images[imgIndex]}`}
+              alt={`${shop.city} showcase`}
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            />
+          </div>
+        )}
       </div>
     </div>
   )
@@ -161,7 +160,7 @@ export default function Stores() {
 Retrouvez-les ci-dessous.</p>
       </header>
 
-      <div className="stores-container">
+      <div className="stores-listing">
         {shopList.map((shop) => (
           <StoreSection key={shop.id} shop={shop} />
         ))}

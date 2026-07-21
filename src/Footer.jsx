@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import titleSvg from './../public/assets/images/title.svg'
+import titleSvg from '/assets/images/title.svg'
 
 const Footer = () => {
   return (
