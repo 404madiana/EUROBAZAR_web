@@ -10,15 +10,13 @@
 .appbar-inner {
   max-width: 1240px;
   margin: 0 auto;
-  padding: 14px 24px;
   display: flex;
   align-items: center;
   justify-content:flex-start;
-  gap: 16px;
-}
 
-@media (max-width: 768px) {
-  .appbar-inner {
+  padding: 14px 24px;
+  gap: 16px;
+  @media (max-width: 768px) {
     padding: 10px 12px;
     gap: 12px;
   }
@@ -37,10 +35,8 @@
   font-weight: 700;
   letter-spacing: 0.03em;
   text-decoration: none;
-}
 
-@media (max-width: 768px) {
-  .brand-plate {
+  @media (max-width: 768px) {
     min-width: 110px;
     height: 40px;
     padding: 0 12px;
@@ -56,16 +52,7 @@
   align-items: center;
 }
 
-/* affichage mobile - liens mobiles */
-@media (max-width: 768px) {
-  .desktop-links {
-    display: none;
-  }
-}
-
-.drawer-title {
-  display: flex;
-}
+.drawer-title { display: flex; }
 
 .desktop-links a,
 .drawer-nav a {
@@ -124,13 +111,8 @@
   left: 0;
 }
 
-.menu-icon::before {
-  top: -6px;
-}
-
-.menu-icon::after {
-  top: 6px;
-}
+.menu-icon::before { top: -6px; } /* sorcellerie */
+.menu-icon::after { top: 6px; }
 
 .drawer { /* Menu - Liste de navigation */
   position: fixed;
@@ -191,21 +173,9 @@
 }
 
 .page-content {
-  padding: 120px 0 0;
   max-width: 1140px;
   margin: 0 auto;
-}
-
-@media (max-width: 768px) {
-  .page-content {
-    padding: 80px 16px 32px;
-  }
-}
-
-@media (max-width: 480px) {
-  .page-content {
-    padding: 70px 12px 24px;
-  }
+  padding: 120px 0 0;
 }
 
 .page-header {
@@ -213,6 +183,8 @@
   display: grid;
   margin-bottom: 32px;
   padding-inline: 40px;
+
+  @media (max-width: 480px) { padding-inline: 0px; }
 }
 
 .page-header .eyebrow {
@@ -227,6 +199,7 @@
   text-transform: uppercase;
   margin-bottom: 48px;
   font-size: clamp(4rem, 5vw, 5.25rem);
+  @media (max-width: 480px) { font-size: 3rem; line-height: normal; }
 }
 
 .page-header p,
@@ -243,14 +216,14 @@
 }
 
 .logo-drawer {
-  width: 250px;
+  width: 200px;
   height: auto;
   max-width: 100%;
 }
 
 .logo-hero {
-  width: 800px;
   height: auto;
+  width: 800px;
   max-width: 100%;
 }
 
@@ -259,25 +232,16 @@
     width: 100%;
     max-width: 400px;
   }
-  
   .logo-drawer {
-    width: 150px;
+    width: 230px;
     max-width: 100%;
   }
 }
 
 @media (max-width: 480px) {
-  .logo-hero {
-    max-width: 280px;
-  }
-  
-  .logo-header {
-    width: 80px;
-  }
-  
-  .logo-drawer {
-    width: 120px;
-  }
+  .logo-hero { max-width: 320px; }
+  .logo-header { width: 210px; }
+  .logo-drawer { width: 230px; }
 }
 
 /* VITE Default div styles */
@@ -316,7 +280,7 @@
 }
 
 @media (max-width: 899px) {
-  .desktop-links {
+  .appbar .desktop-links {
     display: none;
   }
 

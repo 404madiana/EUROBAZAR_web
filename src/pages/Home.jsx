@@ -148,11 +148,11 @@ export default function Home() {
           </div>
         </div>
         <div className="paragraphe contact-store-hours">
-          <p>
+          <div>
             <h2>Des questions, répondus ici.</h2>
             Le site web regroupe tous sujets concernant le magasin et ses questions fréquentes.<br/>
             Vous pouvez les trouver dans le <b>Centre d'aide</b>.
-          </p>
+          </div>
           <div className="desktop-links panneau">
             <Link to="/help">Centre d'aide</Link>
           </div>

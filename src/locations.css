@@ -25,6 +25,10 @@
   border-top: 4px solid currentColor;
   transform: rotate(225deg);
 }
+.store-showcase .arrow::before {
+  @media (max-width: 800px) { height: 10px; }
+}
+
 .arrow.right::before { transform: rotate(45deg); }
 
 .map-pane { flex: 0 0 49%; display: flex; flex-direction: column; border-radius: 12px; background: #ffffffce }
@@ -44,6 +48,9 @@
   .location-card { padding: 16px; }
   .location-content { padding: 0 12px; }
   .map { height: 200px; }
+}
+.store .map-pane {
+  width: 300px; height: 200px;
 }
 
 @media (max-width: 480px) {

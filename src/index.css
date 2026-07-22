@@ -23,7 +23,6 @@
   --heading: 'MadeOuter', 'NuberNext', system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
-  font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
   color-scheme: light dark;
   color: var(--text);
@@ -33,17 +32,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
-  
-  @media (max-width: 768px) {
-    font-size: 15px;
-  }
-  
-  @media (max-width: 480px) {
-    font-size: 14px;
-  }
+  font: 18px/145% var(--sans);
+  @media (max-width: 1024px) { font-size: 16px; }
+  @media (max-width: 768px) { font-size: 15px; }
+  @media (max-width: 480px) { font-size: 14px; }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -74,26 +66,20 @@
   }
 }
 
-body {
-  margin: 0;
-}
+body { margin: 0; }
 
 #root {
   width: 1126px;
   max-width: 100%;
   margin: 0 auto;
   text-align: left;
-  border-inline: 1px solid var(--border);
   min-height: 100svh;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-}
 
-@media (max-width: 480px) {
-  #root {
-    border-inline: none;
-  }
+  border-inline: 1px solid var(--border);
+  @media (max-width: 480px) { border-inline: none; }
 }
 
 @font-face {
@@ -118,38 +104,20 @@ h2 {
 }
 
 h1 {
-  font-size: 56px;
   letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
-  @media (max-width: 768px) {
-    font-size: 28px;
-    margin: 16px 0;
-  }
-  @media (max-width: 480px) {
-    font-size: 22px;
-    margin: 12px 0;
-  }
+  font-size: 56px; margin: 32px 0;
+  @media (max-width: 1024px) { font-size: 36px; margin: 20px 0; }
+  @media (max-width: 768px) { font-size: 28px; margin: 16px 0; }
+  @media (max-width: 480px) { font-size: 22px; margin: 12px 0; }
 }
 h2 {
   font-size: 34px;
   line-height: 118%;
   letter-spacing: -0.24px;
   margin: 0 0 19px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-  @media (max-width: 768px) {
-    font-size: 18px;
-    margin: 0 0 12px;
-  }
-  @media (max-width: 480px) {
-    font-size: 16px;
-    margin: 0 0 8px;
-  }
+  @media (max-width: 1024px) { font-size: 30px; }
+  @media (max-width: 768px) { font-size: 28px; margin: 0 0 12px; }
+  @media (max-width: 480px) { font-size: 23px; margin: 0 0 8px; }
 }
 p {
   margin: 0;
