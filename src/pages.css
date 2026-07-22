@@ -197,11 +197,12 @@ h1 {
 .store {
   display: flex;
   flex-direction: column;
+  background-color: var(--location-card);
   gap: 32px;
 }
 
 .store-info-map {
-  border: 1px solid var(--border);
+  /* border: 1px solid var(--border); */
   display: flex;
   gap: 32px;
   align-items: flex-start;
@@ -256,6 +257,7 @@ h1 {
 .contact-store-hours {
   display: grid;
   grid-auto-flow: column;
+  gap: 30px;
 }
 
 .store-map-pane .leaflet-container {
@@ -268,7 +270,7 @@ h1 {
 
 .store-showcase { /* Store Showcase */
   align-items: flex-start;
-  border: 1px solid var(--border);
+  background-color: var(--bg);
   padding: 40px 24px;
   text-align: center;
 }
@@ -514,18 +516,31 @@ h1 {
   }
 }
 
+/* ========== PAGE CONTACT ==========*/
+.texte-hi {
+  color: var(--text-h);
+}
+.tel-titre {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 22px;
+}
 /* ========== PAGE CENTRE D'AIDE ==========*/
 .help-grid { /* Help Grid Layout */
   display: grid;
   grid-template-columns: 300px 1fr;
-  gap: 40px;
   margin-top: 32px;
+  border: 1px solid var(--border);
+  background-color: var(--social-bg, #e5e5e5bc);
+  /* padding: 60px 40px; */
 }
 
 .help-sidebar {
   position: sticky;
   top: 100px;
   height: fit-content;
+  padding: 60px 30px;
 }
 
 .help-nav {
@@ -548,22 +563,25 @@ h1 {
   border-radius: 8px;
   transition: all 0.2s ease;
   border-left: 3px solid transparent;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .help-nav-item:hover {
-  background-color: var(--accent-bg, #f5f3ff);
+  background-color: var(--accent-github-bg, #f5f3ff88);
 }
 
 .help-nav-item.active {
-  background-color: var(--accent-bg, #f5f3ff);
-  color: var(--accent, #5b21b6);
-  border-left-color: var(--accent, #5b21b6);
+  background-color: var(--accent-github-bg, #f5f3ff88);
+  color: var(--accent-github, #5b21b6);
+  border-left-color: var(--accent-github, #5b21b6);
   font-weight: 600;
 }
 
 .help-content {
+  padding: 60px 40px;
   line-height: 1.8;
   font-size: 16px;
+  background-color: var(--bg);
 }
 
 .help-content h1 {

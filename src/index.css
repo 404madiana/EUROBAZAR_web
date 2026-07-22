@@ -7,12 +7,15 @@
   --code-bg: #f4f3ec;
   --accent: #3b48ff;
   --accent-github: #bdbd00;
+  --accent-github-bg: #fafa716e;
   --appbar-btn-bg: #9dacff;
   --accent-bg: rgba(59, 82, 255, 0.25);
   --accent-border: rgba(59, 85, 255, 0.5);
   --social-bg: rgba(244, 243, 236, 0.5);
   --location-bg: rgba(255, 255, 255, 0.88);
+  --location-card: #efefff93;
   --map-bg: #bfbfbf;
+  --store-bg: #bfbfbf3c;
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
@@ -53,12 +56,15 @@
     --code-bg: #1f2028;
     --accent: #84a8fc;
     --accent-github: #ffff00;
+    --accent-github-bg: #9f9f006e;
     --appbar-btn-bg: #4960be;
     --accent-bg: rgba(132, 158, 252, 0.15);
     --accent-border: rgba(132, 176, 252, 0.5);
     --social-bg: rgba(47, 48, 58, 0.5);
     --location-bg: rgba(15, 23, 42, 0.88);
+    --location-card: #2b2b3e93;
     --map-bg: #24304a;
+    --store-bg: #24304a3c;
     --shadow:
       rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
   }

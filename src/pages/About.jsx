@@ -51,7 +51,7 @@ export default function About() {
         <p>Bazar, magasin, épicerie, caserne... EuroBazar réunit des produits choisis avec soin, des boutiques locales et une équipe engagée pour votre satisfaction.</p>
       </header>
 
-      <div className="paragraphe">
+      <div className="paragraphe" style={{backgroundColor: "var(--accent-bg)"}}>
         <p>EUROBAZAR est un ensemble de commerces alimentaire et ménagère depuis 1995, se situant principalement dans le département du Val-de-Marne.</p>
         <p>
           Depuis notre création, nous avons à cœur de proposer une expérience d'achat simple.

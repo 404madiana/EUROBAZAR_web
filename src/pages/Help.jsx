@@ -55,13 +55,13 @@ export default function Help() {
       <header className="page-header">
         <p className="eyebrow"></p>
         <h1>Centre d'aide</h1>
-        <div className="paragraphe contact-store-hours">
+        <div className="contact-store-hours">
           <p>
             Cette page regroupe toutes questions et remarques
             fréquentes à propos de nos magasins.<br/>
             Si vous ne trouvez pas ce que vous voulez ou qu'il y a un problème sur le site, contactez-nous !
           </p>
-          <div className="desktop-links panneau">
+          <div className="desktop-links panneau" style={{marginRight: "40px"}}>
             <Link to="/contact">Contactez-nous !</Link>
           </div>
         </div>

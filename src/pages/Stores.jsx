@@ -102,7 +102,7 @@ function StoreSection({ shop }) {
           <MapContainer
             center={[shop.coords.lat, shop.coords.lon]}
             zoom={14}
-            style={{ height: '400px', width: '100%' }}
+            style={{ height: '400px', width: '100%' , position: 'relative'}}
           >
             <TileLayer
               attribution="&copy; OpenStreetMap contributors"

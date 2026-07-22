@@ -2,7 +2,7 @@
 .appbar {
   position: fixed;
   inset: 0 0 auto;
-  z-index: 50;
+  z-index: 2000;
   background: var(--bg, #ffffff);
   border-bottom: 1px solid var(--border, #e2e8f0);
 }
