@@ -66,8 +66,11 @@ export default function About() {
         <div>
           <h3>Saïd DOUICH</h3>
           <p>
-            Gérant d'EUROBAZAR depuis juin 2015,
-            il est en tête de tous la gestion et services relatifs au sein du magazin.
+            Gérant actuel d'EUROBAZAR depuis juin 2015, il est chef de toute la gestion et services relatifs au sein du magasin.
+            <br/><br/>
+            Ce serait à lui de s'adresser en priorité concernant les prix et les requêtes de produit, ainsi que toute relation concernant les approvisionnements, garantie et réparation.
+            <br/><br/>
+            Si vous souhaitez le contacter, rendez-vous directement chez EUROBAZAR ou appelez le numéro inscrit ci-dessous.
           </p>
           <div className='pied'><CopyableBlock content="06 18 78 06 99" label="Copier le numéro" /></div>
         </div>

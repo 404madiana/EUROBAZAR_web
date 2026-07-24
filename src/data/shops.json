@@ -12,13 +12,13 @@
       "mardi": "09:00 - 19:00",
       "mercredi": "09:00 - 19:00",
       "jeudi": "09:00 - 19:00",
-      "vendredi": "09:00 - 19:00",
+      "vendredi": "09:00 - 13:00, 14:00 - 19:00",
       "samedi": "09:00 - 19:00",
       "dimanche": "09:00 - 19:00"
     }
   },
-  "paris": {
-    "id": "paris",
+  "vj": {
+    "id": "vj",
     "name": "O'SHOPPING",
     "city": "Villejuif",
     "phone": "06 18 78 06 99",

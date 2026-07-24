@@ -122,6 +122,33 @@ h1 {
   }
 }
 
+.services {
+  background-color: var(--location-card);
+  .en-tete {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+}
+.service {
+  padding: 20px 40px 34px;
+  background-color: var(--bg);
+  border-radius: 12px;
+  transition: transform 0.2s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+.service:hover { transform: scale(1.05); }
+
 /* ========== PAGE MAGASINS ==========*/
 .stores-listing { /* Stores Section */
   display: flex;

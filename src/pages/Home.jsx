@@ -1,8 +1,9 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import './leafletSetup.js'
 import shops from '../data/shops.json'
+import services from '../data/services.json'
 import titleSvg from '/assets/images/title.svg'
 import { Link } from 'react-router-dom'
 
@@ -62,7 +63,7 @@ export default function Home() {
             backgroundPosition: 'center',
           }}
         >
-          <h2 style={{ color: '#fff' }}>Retrouvez-nous !</h2>
+          <h2><Link style={{ color: '#fff' }} to="/stores">Retrouvez-nous !</Link></h2>
           <div className="locations-inner">
             <div className="map-pane">
               <div className="location-card">
@@ -145,6 +146,20 @@ export default function Home() {
                 </MapContainer>
               </div>
             </div>
+          </div>
+        </div>
+        <div className="paragraphe services">
+          <div className='en-tete'>
+            <h2>Ce que nous vous proposons</h2>
+            <p>Découvrez nos rayons et services accessibles au magasin.</p>
+          </div>
+          <div className="services-grid">
+            {services.map((service) => (
+              <div key={service.id} className="service">
+                <h3>{service.service}</h3>
+                <p>{service.description}</p>
+              </div>
+            ))}
           </div>
         </div>
         <div className="paragraphe contact-store-hours">

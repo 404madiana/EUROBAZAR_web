@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "service": "Alimentation/épicerie",
+    "description": "Fruits secs, thés/cafés, semoules, bonbons..."
+  },
+  {
+    "id": 2,
+    "service": "Aménagements",
+    "description": "Matelas, tapis, ornements, housses..."
+  },
+  {
+    "id": 3,
+    "service": "Ustensiles",
+    "description": "Théières, couverts, plateaux, verres..."
+  },
+  {
+    "id": 4,
+    "service": "Électroménager",
+    "description": "Ventilateurs, barbecues, bouilloires..."
+  },
+  {
+    "id": 5,
+    "service": "Trésors",
+    "description": "Encens, décoratum, parfumerie..."
+  },
+  {
+    "id": 6,
+    "service": "Loisirs/Saisonniers",
+    "description": "Boîtes pour gâteaux, jouets, gacha dumplings..."
+  },
+  {
+    "id": 7,
+    "service": "Machine à café",
+    "description": "1€/verre. Distributeur installé à l'enceinte de EUROBAZAR."
+  },
+  {
+    "id": 8,
+    "service": "Échanges de monnaie",
+    "description": "CB -> Espèces et vice-versa, souvent pour le café."
+  }
+]
