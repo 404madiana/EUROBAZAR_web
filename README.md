@@ -27,7 +27,7 @@ L'autrice du site web a planifié des étapes essentiels pour la construction du
 - [x] Création des pages vitrines (Accueil, "Nos magasins", "À propos", "Nous contacter", "Centre d'aide")
 - [x] Publication du projet sur GitHub
 - [x] Déploiement du site sur GitHub Pages
-- [ ] Réarrangement des contenus dans les pages vitrines
+- [x] Réarrangement des contenus dans les pages vitrines
 - [x] Création des feuilles markdown pour la page "Centre d'aide"
 - [ ] (optionnel) Création des pages "Nos produits" avec base de données CashMag
 - [ ] Déploiement du site sur Vercel
