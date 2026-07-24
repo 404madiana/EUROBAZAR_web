@@ -137,7 +137,7 @@ function StoreSection({ shop }) {
         </div>
 
         {n > 0 && (
-          <div className="store-image-pane map-pane">
+          <div className="store-image-pane">
             <img
               src={`${shopImagesBasePath}${images[imgIndex]}`}
               alt={`${shop.city} showcase`}
