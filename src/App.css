@@ -71,8 +71,7 @@
   color: var(--accent, #5b21b6);
 }
 
-/* ======== MENU ======== */
-
+/* ======== MENU LATÉRAL ======== */
 .menu-toggle {
   display: inline-flex;
   align-items: center;
@@ -172,6 +171,7 @@
   pointer-events: auto;
 }
 
+/* ======== PAGES ======== */
 .page-content {
   max-width: 1140px;
   margin: 0 auto;
@@ -296,3 +296,10 @@
     padding-top: 74px;
   }
 }
+
+/* ======== RÉSEAUX SOCIAUX ======== */
+.social-instagram { background-image: var(--instagram); transition: transform 0.2s ease-in-out; }
+#instagram { background-image: var(--instagram); }
+.social-tiktok { background-image: var(--tiktok); transition: transform 0.2s ease-in-out; }
+#tiktok { background-image: var(--tiktok); }
+.social-instagram:hover, .social-tiktok:hover { transform: scale(1.05); }

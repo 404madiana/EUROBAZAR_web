@@ -78,6 +78,12 @@ function App() {
             <Link to="/help" onClick={() => setDrawerOpen(false)}>
               Centre d'aide
             </Link>
+            <a id='instagram' href="https://www.instagram.com/euro_bazar_/" target="_blank" rel="noopener noreferrer">
+              Suivez-nous sur Instagram !
+            </a>
+            <a id='tiktok' href="https://www.tiktok.com/@eurobazar94" target="_blank" rel="noopener noreferrer">
+              Suivez-nous sur TikTok !
+            </a>
           </nav>
         </div>
 

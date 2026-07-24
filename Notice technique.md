@@ -11,7 +11,17 @@ Le chantier du site est prévisualisable sur [https://404madiana.github.io/EUROB
 Ce chantier a pour principe de viualiser la construction en temps réel du site pour les non contributeurs.<br>Il serait alors un aperçu beta du rendement final lors du déploiement sur Vercel.
 
 - Je tiens à remercier [sitek94](https://github.com/sitek94) avec l'[Action Deploy Vite App](https://github.com/sitek94/vite-deploy-demo) pour configurer [deploy.yml](https://github.com/404madiana/EUROBAZAR_web/blob/master/.github/workflows/deploy.yml). Ce fichier permet de build et deployer automatiquement à chaque push d'office sur la branche `master`.
-- Je tiens à créditer [EminDevNoth](https://github.com/EminDevNoth) pour son [Workflow runs remover](https://github.com/marketplace/actions/workflow-runs-remover) qui a épargné mon historique de déploiement.
+- Je tiens à créditer [EminDevNoth](https://github.com/EminDevNoth) pour son [Workflow runs remover](https://github.com/marketplace/actions/workflow-runs-remover) qui a épargné mon historique d'actions, notamment des workflows.
+Je tiens également la mention de strumwolf pour l'[Action delete-deployment-environment](https://github.com/marketplace/actions/delete-deployment-environment) qui permet de réduire l'historique des tentatives de déploiement qu'on a galéré à lancer.
+
+# (iana) Vercel et Infomaniak
+
+On a choisi [Vercel](https://vercel.com/) pour raccourcir le lien web... et le comportement web app permanent.<br>
+Vous pouvez y accéder ici : [https://eurobazar.vercel.app/](https://eurobazar.vercel.app/)
+
+## Concernant le nom de dommaine
+Nous avons décidé de réserver le mieux possible comme nom de domaine `www.eurobazar-kb.fr`.<br>
+Vercel propose aussi son magasin interne de noms de domaine qui permet de comparer les noms et prix, mais nous préférons [Infomaniak](https://welcome.infomaniak.com/) car il vend moins cher et c'est français 💪
 
 <br/>
 

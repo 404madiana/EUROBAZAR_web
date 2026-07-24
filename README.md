@@ -4,7 +4,7 @@
 Ceci est un projet web de vitrine numérique pour le magasin EUROBAZAR.<br>
 Le projet a pour but d'augmenter la visibilité numérique du magasin et d'ancrer l'enseigne sur Internet.
 
-Toutes remarques techniques se font sur [Notice Vite.md](https://github.com/404madiana/EUROBAZAR_web/blob/master/Notice%20Vite.md).
+Toutes remarques techniques se font sur [Notice technique.md](https://github.com/404madiana/EUROBAZAR_web/blob/master/Notice%20technique.md).
 
 N'hésitez pas à nous suggérer des fonctionnalités ou simplement nous contacter en lançant une nouvelle [issue](https://github.com/404madiana/EUROBAZAR_web/issues/new).
 
@@ -28,9 +28,9 @@ L'autrice du site web a planifié des étapes essentiels pour la construction du
 - [x] Publication du projet sur GitHub
 - [x] Déploiement du site sur GitHub Pages
 - [x] Réarrangement des contenus dans les pages vitrines
-- [x] Création des feuilles markdown pour la page "Centre d'aide"
+- [ ] Création des feuilles markdown pour la page "Centre d'aide"
 - [ ] (optionnel) Création des pages "Nos produits" avec base de données CashMag
-- [ ] Déploiement du site sur Vercel
+- [x] Déploiement du site sur Vercel
 - [ ] Achat du nom de domaine
 
 Les pages vitrines sont en cours, on attend à ce qu'ils soient similaires aux images dans [penpot-plans](https://github.com/404madiana/EUROBAZAR_web/tree/master/penpot-plans).

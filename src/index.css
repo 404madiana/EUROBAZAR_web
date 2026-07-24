@@ -16,6 +16,8 @@
   --location-card: #efefff93;
   --map-bg: #bfbfbf;
   --store-bg: #bfbfbf3c;
+  --instagram: linear-gradient(to right, #d300c5, #ff0069);
+  --tiktok: linear-gradient(to right, #20d5ec, #fe2c55);
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 

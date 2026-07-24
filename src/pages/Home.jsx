@@ -172,6 +172,13 @@ export default function Home() {
             <Link to="/help">Centre d'aide</Link>
           </div>
         </div>
+        <div className="social-block">
+          <h2>Suivez-nous sur les réseaux !</h2>
+          <div className="desktop-links panneau">
+            <a className='social-instagram' href="https://www.instagram.com/euro_bazar_/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a className='social-tiktok' href="https://www.tiktok.com/@eurobazar94" target="_blank" rel="noopener noreferrer">TikTok</a>
+          </div>
+        </div>
       </section>
     </>
   )
