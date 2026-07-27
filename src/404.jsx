@@ -16,7 +16,7 @@ const TITLES = [
 
 const REFRESH_KEY = "eurobazar_404_refresh_count";
 const BONUS_TITLE = "Vaut mieux reporter ce problème sur GitHub nan?";
-const VALID_PAGES = ["/", "/stores", "/about", "/contact", "/help"];
+const VALID_PAGES = ["/", "/magasins", "/a-propos", "/contact", "/aide", "/soutien"];
 
 export default function NotFound() {
   const location = useLocation();

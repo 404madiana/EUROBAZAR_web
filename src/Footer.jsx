@@ -15,10 +15,10 @@ const Footer = () => {
         <p>94270 Le Kremlin-Bicêtre</p>
       </div>
       <div className="desktop-links carrefour">
-        <Link to="/stores">Nos magasins</Link>
-        <Link to="/about">À propos de nous</Link>
+        <Link to="/magasins">Nos magasins</Link>
+        <Link to="/a-propos">À propos de nous</Link>
         <Link to="/contact">Nous contacter</Link>
-        <Link to="/help">Centre d'aide</Link>
+        <Link to="/aide">Centre d'aide</Link>
         <Link to="https://github.com/404madiana/EUROBAZAR_web" style={{color: '#ffff00'}}>Projet du site web (GitHub)</Link>
       </div>
     </footer>

@@ -1,6 +1,7 @@
 # Site web pour EUROBAZAR
 
-## [Par ici pour voir le site.](https://404madiana.github.io/EUROBAZAR_web/)
+## [Par ici pour voir le site.](https://eurobazar-kb.com/)
+#### [Par ici pour voir le chantier GitHub Pages.](https://404madiana.github.io/EUROBAZAR_web/)
 Ceci est un projet web de vitrine numérique pour le magasin EUROBAZAR.<br>
 Le projet a pour but d'augmenter la visibilité numérique du magasin et d'ancrer l'enseigne sur Internet.
 
@@ -30,7 +31,7 @@ L'autrice du site web a planifié des étapes essentiels pour la construction du
 - [x] Réarrangement des contenus dans les pages vitrines
 - [ ] Création des feuilles markdown pour la page "Centre d'aide"
 - [ ] (optionnel) Création des pages "Nos produits" avec base de données CashMag
-- [x] Déploiement du site sur Vercel
-- [ ] Achat du nom de domaine
+- [x] Déploiement du site sur Vercel (https://eurobazar.vercel.app/)
+- [x] Achat du nom de domaine
 
 Les pages vitrines sont en cours, on attend à ce qu'ils soient similaires aux images dans [penpot-plans](https://github.com/404madiana/EUROBAZAR_web/tree/master/penpot-plans).

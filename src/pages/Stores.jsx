@@ -160,7 +160,7 @@ export default function Stores() {
 Retrouvez-les ci-dessous.</p>
       </header>
 
-      <div className="stores-listing">
+      <div className="magasins-listing">
         {shopList.map((shop) => (
           <StoreSection key={shop.id} shop={shop} />
         ))}

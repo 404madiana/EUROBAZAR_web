@@ -63,7 +63,7 @@ export default function Home() {
             backgroundPosition: 'center',
           }}
         >
-          <h2><Link style={{ color: '#fff' }} to="/stores">Retrouvez-nous !</Link></h2>
+          <h2><Link style={{ color: '#fff' }} to="/magasins">Retrouvez-nous !</Link></h2>
           <div className="locations-inner">
             <div className="map-pane">
               <div className="location-card">
@@ -169,7 +169,7 @@ export default function Home() {
             Vous pouvez les trouver dans le <b>Centre d'aide</b>.
           </div>
           <div className="desktop-links panneau">
-            <Link to="/help">Centre d'aide</Link>
+            <Link to="/aide">Centre d'aide</Link>
           </div>
         </div>
         <div className="social-block">
@@ -177,6 +177,7 @@ export default function Home() {
           <div className="desktop-links panneau">
             <a className='social-instagram' href="https://www.instagram.com/euro_bazar_/" target="_blank" rel="noopener noreferrer">Instagram</a>
             <a className='social-tiktok' href="https://www.tiktok.com/@eurobazar94" target="_blank" rel="noopener noreferrer">TikTok</a>
+            <a className='social-facebook' href="https://www.facebook.com/p/EURO-BAZAR-100079855926200" target="_blank" rel="noopener noreferrer">Facebook</a>
           </div>
         </div>
       </section>

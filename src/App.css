@@ -184,7 +184,6 @@
   margin-bottom: 32px;
   padding-inline: 40px;
 
-  @media (max-width: 480px) { padding-inline: 0px; }
 }
 
 .page-header .eyebrow {
@@ -302,4 +301,6 @@
 #instagram { background-image: var(--instagram); }
 .social-tiktok { background-image: var(--tiktok); transition: transform 0.2s ease-in-out; }
 #tiktok { background-image: var(--tiktok); }
+.social-facebook { background-image: var(--facebook); transition: transform 0.2s ease-in-out; }
+#facebook { background-image: var(--facebook); }
 .social-instagram:hover, .social-tiktok:hover { transform: scale(1.05); }
