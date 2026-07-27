@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 const REFRESH_KEY = "eurobazar_404_refresh_count";
-const VALID_PAGES = ["/", "/stores", "/about", "/contact", "/help"];
+const VALID_PAGES = ["/", "/magasins", "/a-propos", "/contact", "/aide", "/soutien"];
 
 export default function Reset404Counter() {
   const location = useLocation();

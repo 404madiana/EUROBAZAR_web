@@ -10,6 +10,7 @@ import Stores from './pages/Stores.jsx'
 import About from './pages/About.jsx'
 import Contact from './pages/Contact.jsx'
 import Help from './pages/Help.jsx'
+import Soutien from './pages/Soutien.jsx'
 import titleSvg from '/assets/images/title.svg'
 import Footer from './Footer.jsx';
 import NotFound from './404.jsx'
@@ -38,10 +39,11 @@ function App() {
           </Link>
 
           <div className="desktop-links">
-            <Link to="/stores">Nos magasins</Link>
-            <Link to="/about">À propos de nous</Link>
+            <Link to="/magasins">Nos magasins</Link>
+            <Link to="/a-propos">À propos de nous</Link>
             <Link to="/contact">Nous contacter</Link>
-            <Link to="/help">Centre d'aide</Link>
+            <Link to="/aide">Centre d'aide</Link>
+            <Link to="/soutien" style={{color: "red"}}>Soutenir le site</Link>
           </div>
         </div>
 
@@ -66,18 +68,30 @@ function App() {
             </button>
           </div>
           <nav className="drawer-nav">
-            <Link to="/stores" onClick={() => setDrawerOpen(false)}>
+            <Link to="/magasins" onClick={() => setDrawerOpen(false)}>
               Nos magasins
             </Link>
-            <Link to="/about" onClick={() => setDrawerOpen(false)}>
+            <Link to="/a-propos" onClick={() => setDrawerOpen(false)}>
               À propos de nous
             </Link>
             <Link to="/contact" onClick={() => setDrawerOpen(false)}>
               Nous contacter
             </Link>
-            <Link to="/help" onClick={() => setDrawerOpen(false)}>
+            <Link to="/aide" onClick={() => setDrawerOpen(false)}>
               Centre d'aide
             </Link>
+            <Link to="/soutien" onClick={() => setDrawerOpen(false)} style={{backgroundColor: "red"}}>
+              Soutenez le site !
+            </Link>
+            <a id='instagram' href="https://www.instagram.com/euro_bazar_/" target="_blank" rel="noopener noreferrer">
+              Suivez-nous sur Instagram !
+            </a>
+            <a id='tiktok' href="https://www.tiktok.com/@eurobazar94" target="_blank" rel="noopener noreferrer">
+              Suivez-nous sur TikTok !
+            </a>
+            <a id='facebook' href="https://www.facebook.com/p/EURO-BAZAR-100079855926200" target="_blank" rel="noopener noreferrer">
+              Suivez-nous sur Facebook !
+            </a>
           </nav>
         </div>
 
@@ -89,10 +103,11 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/stores" element={<Stores />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/magasins" element={<Stores />} />
+          <Route path="/a-propos" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/help" element={<Help />} />
+          <Route path="/aide" element={<Help />} />
+          <Route path="/soutien" element={<Soutien />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

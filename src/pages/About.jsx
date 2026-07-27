@@ -51,7 +51,7 @@ export default function About() {
         <p>Bazar, magasin, épicerie, caserne... EuroBazar réunit des produits choisis avec soin, des boutiques locales et une équipe engagée pour votre satisfaction.</p>
       </header>
 
-      <div className="paragraphe about-paragraphe">
+      <div className="paragraphe a-propos-paragraphe">
         <p>EUROBAZAR est un ensemble de commerces alimentaire et ménagère depuis 1995, se situant principalement dans le département du Val-de-Marne.</p>
         <p>
           Depuis notre création, nous avons à cœur de proposer une expérience d'achat simple.
@@ -62,7 +62,7 @@ export default function About() {
         </p>
       </div>
       <div className="ticks" />
-      <div className="about-profile paragraphe">
+      <div className="a-propos-profile paragraphe">
         <div>
           <h3>Saïd DOUICH</h3>
           <p>
@@ -75,14 +75,14 @@ export default function About() {
           <div className='pied'><CopyableBlock content="06 18 78 06 99" label="Copier le numéro" /></div>
         </div>
         <div className="store-image-pane">
-          <img src="./assets/images/favicon.png" className="about-image"></img>
+          <img src="./assets/images/favicon.png" className="a-propos-image"></img>
         </div>
       </div>
       <div className="social-block">
         <h2>Une question ?</h2>
         <div className="desktop-links panneau">
           <Link to="/contact">Contactez-nous !</Link>
-          <Link to="/help">Centre d'aide</Link>
+          <Link to="/aide">Centre d'aide</Link>
         </div>
       </div>
     </section>

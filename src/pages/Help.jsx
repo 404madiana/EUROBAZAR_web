@@ -67,13 +67,13 @@ export default function Help() {
         </div>
       </header>
 
-      <div className="help-grid">
-        <aside className="help-sidebar">
-          <nav className="help-nav">
+      <div className="aide-grid">
+        <aside className="aide-sidebar">
+          <nav className="aide-nav">
             {notices.map(notice => (
               <button
                 key={notice.id}
-                className={`help-nav-item ${selectedNotice === notice.id ? 'active' : ''}`}
+                className={`aide-nav-item ${selectedNotice === notice.id ? 'active' : ''}`}
                 onClick={() => setSelectedNotice(notice.id)}
               >
                 {notice.label}
@@ -81,7 +81,7 @@ export default function Help() {
             ))}
           </nav>
         </aside>
-        <main className="help-content">
+        <main className="aide-content">
           {content && <ReactMarkdown>{content}</ReactMarkdown>}
         </main>
       </div>

@@ -116,6 +116,14 @@ export default function Contact() {
           })}
         </div>
       </div>
+      <div className="paragraphe" style={{backgroundColor: "var(--social-bg)"}}>
+        <h2>Sur les réseaux</h2>
+        <div className="desktop-links panneau">
+          <a className='social-instagram' href="https://www.instagram.com/euro_bazar_/" target="_blank" rel="noopener noreferrer">Instagram (@euro_bazar_)</a>
+          <a className='social-tiktok' href="https://www.tiktok.com/@eurobazar94" target="_blank" rel="noopener noreferrer">TikTok (@eurobazar94)</a>
+          <a className='social-facebook' href="https://www.facebook.com/p/EURO-BAZAR-100079855926200" target="_blank" rel="noopener noreferrer">Facebook (@EURO BAZAR)</a>
+        </div>
+      </div>
     </section>
   )
 }

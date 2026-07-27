@@ -14,8 +14,12 @@
   --social-bg: rgba(244, 243, 236, 0.5);
   --location-bg: rgba(255, 255, 255, 0.88);
   --location-card: #efefff93;
+  --qr-code: #cdcdff93;
   --map-bg: #bfbfbf;
   --store-bg: #bfbfbf3c;
+  --instagram: linear-gradient(to right, #d300c5, #ff0069);
+  --tiktok: linear-gradient(to right, #20d5ec, #fe2c55);
+  --facebook: linear-gradient(to right, #0866ff, #0866ff);
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
@@ -55,6 +59,8 @@
     --social-bg: rgba(47, 48, 58, 0.5);
     --location-bg: rgba(15, 23, 42, 0.88);
     --location-card: #2b2b3e93;
+    --qr-code: #cdcdffe0;
+
     --map-bg: #24304a;
     --store-bg: #24304a3c;
     --shadow:
