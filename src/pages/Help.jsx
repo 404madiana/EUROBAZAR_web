@@ -58,7 +58,7 @@ export default function Help() {
         <div className="contact-store-hours">
           <p>
             Cette page regroupe toutes questions et remarques
-            fréquentes à propos de nos magasins.<br/>
+            usuelles à propos de nos magasins.<br/>
             Si vous ne trouvez pas ce que vous voulez ou qu'il y a un problème sur le site, contactez-nous !
           </p>
           <div className="desktop-links panneau" style={{marginRight: "40px"}}>

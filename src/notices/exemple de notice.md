@@ -1,12 +1,13 @@
 # Un exemplaire de notice
 
 Voici un aperçu d'un fichier nommé "exemple.md".
-Le principe est d'afficher le contenu d'un fichier MarkDown via ReactMarkdown.
+Le principe est d'afficher le contenu (ducoup le texte) d'un fichier MarkDown via ReactMarkdown.
 
 ## Pourquoi faire ??
 
-Le site va utiliser des fichiers markdown pour rédiger des remarques d'utilité public concernant plusieurs aspects du magasin EUROBAZAR. 
-Ce fichier est un test pour l'implémentation de l'affichage.
+Le site va utiliser des fichiers markdown pour rédiger des remarques d'utilité public, dorénavent pour la clientèle, concernant plusieurs aspects du magasin EUROBAZAR.
+
+Ce texte que vous voyer est un test pour l'implémentation de l'affichage markdown.
 
 ## Pourquoi Markdown ?
 
