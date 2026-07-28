@@ -19,10 +19,14 @@ Je tiens également la mention de strumwolf pour l'[Action delete-deployment-env
 On a choisi [Vercel](https://vercel.com/) pour raccourcir le lien web... et le comportement web app permanent, pour tenter d'implanter une synchronisation entre le site et la base de données CashMag du magasin.<br>
 Vous pouvez y accéder ici : [https://eurobazar.vercel.app/](https://eurobazar.vercel.app/)
 
-## Concernant le nom de domaine
+## Concernant l'adresse web
 
+### Nom de domaine
 Nous avons décidé de réserver le mieux possible comme nom de domaine `www.eurobazar-kb.com`.<br>
 Vercel propose aussi son magasin interne de noms de domaine qui permet de comparer les noms et prix, mais nous préférons [Infomaniak](https://welcome.infomaniak.com/) car il vend moins cher et c'est français 💪
+
+### Moteurs de recherche et indexation
+Le projet comprend un fichier de validation [Google](https://github.com/404madiana/EUROBAZAR_web/blob/master/googled5a847b9f0e54ac6.html) pour apparaître le site web `www.eurobazar-kb.com` sur les résultats de recherche Google.
 
 <br/>
 

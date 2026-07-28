@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { HashRouter, Routes, Route, Link, useLocation, Navigate } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Link, useLocation, Navigate } from 'react-router-dom'
 import './App.css'
 import './pages.css'
 import './index.css'
@@ -20,7 +20,7 @@ function App() {
   const [drawerOpen, setDrawerOpen] = useState(false)
 
   return (
-    <HashRouter>
+    <Router>
       <header className="appbar">
         <div className="appbar-inner">
           <button
@@ -113,7 +113,7 @@ function App() {
       </main>
       <div className="ticks" />
       <Footer />
-    </HashRouter>
+    </Router>
   )
 }
 
