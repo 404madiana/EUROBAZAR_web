@@ -8,4 +8,4 @@ Pour les autres natures de contrat (CDI, alternance...), nous sommes malheureuse
 
 ## Comment postuler
 
-Rendez-vous directement dans le magasin (EUROBAZAR Kremlin-Bicêtre) et rencontrez [Saïd](#/a-propos). Préparez votre **CV** et votre **convention de stage**.
+Rendez-vous directement dans le magasin (EUROBAZAR Kremlin-Bicêtre) et rencontrez [Saïd](/a-propos). Préparez votre **CV** et votre **convention de stage**.

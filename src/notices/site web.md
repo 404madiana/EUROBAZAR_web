@@ -12,4 +12,4 @@ Pour en savoir plus sur la construction du site, rendez-vous sur [Notice techniq
 
 ## Comment soutenir
 
-Pour soutenir Diana et l'entretien du site web, [rendez-vous ici !](#/soutien)
+Pour soutenir Diana et l'entretien du site web, [rendez-vous ici !](/soutien)
