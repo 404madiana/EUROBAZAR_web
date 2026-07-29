@@ -29,7 +29,7 @@ L'autrice du site web a planifié des étapes essentiels pour la construction du
 - [x] Publication du projet sur GitHub
 - [x] Déploiement du site sur GitHub Pages
 - [x] Réarrangement des contenus dans les pages vitrines
-- [ ] Création des feuilles markdown pour la page "Centre d'aide"
+- [x] Création des feuilles markdown pour la page "Centre d'aide"
 - [ ] (optionnel) Création des pages "Nos produits" avec base de données CashMag
 - [x] Déploiement du site sur Vercel (https://eurobazar.vercel.app/)
 - [x] Achat du nom de domaine
